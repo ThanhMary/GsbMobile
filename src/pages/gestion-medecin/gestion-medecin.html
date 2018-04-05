@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        GESTION DE MEDECINS
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding >
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+          <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">>
+        </ion-refresher-content>
+     </ion-refresher>
+
+    <img id = "imageMedecin" src="assets/img/medecin.png"/>
+    <div class="spacer" style="width:300px;height:70px;"></div>
+    <button ion-button color="positive" block on-click="goToNouveauMedecinPage()">
+      CREER UN NOUVEAU
+    </button>
+    <div class="spacer" style="width:300px;height:15px;"></div>
+    <button ion-button color="positive" block on-click="goToListeMedecinPage()">
+      MODIFIER
+    </button>
+    <div class="spacer" style="width:300px;height:25.9844px;"></div>
+    <div>
+      <a style="display:block;" on-click="goToAccueil()">
+        <img src="assets/img/logo.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;" />
+      </a>
+    </div>
+  </ion-content>

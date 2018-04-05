@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Mon Profil
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding >
+    <form>
+      <ion-item color="positive">
+        <ion-icon name="archive" item-left></ion-icon>
+           Mon profil
+      </ion-item>
+      <ion-item>
+        <ion-label>Nom </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label> Prénom </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+
+        <ion-item >
+          <ion-label> login </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-item >
+            <ion-label>Mot de passe </ion-label>
+            <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+     
+      <button ion-button color="positive" block on-click="goToAccueilPage()"> Valider </button>
+      <div>
+        <a style="display:block;" on-click="goToAccueilPage()">
+          <img src="assets/img/logo.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;" />
+        </a>
+      </div>
+    </form>
+  </ion-content>

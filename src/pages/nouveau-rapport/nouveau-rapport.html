@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button></button>
+      </ion-buttons>
+      <ion-title>
+        Nouveau Rapport
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <form>
+      <img src="assets/img/rap.jpg" style="display:block;width:35%;height:auto;margin-left:auto;margin-right:auto;" />
+      <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+        </ion-item>
+      <ion-item>
+        <ion-label> Motif </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+       <ion-item>
+        <ion-label> Médicaments </ion-label>
+        <ion-textarea placeholder="nom et nombre d'échantillon"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>  Bilan  </ion-label>
+        <ion-textarea placeholder=""></ion-textarea>
+      </ion-item>
+      <br>
+      <ion-searchbar placeholder="Nom de médecins" name="" ></ion-searchbar>
+    </form>
+    <br>
+    <button ion-button color="positive" block on-click="ListeRapportPage()"> Enregistrer</button>
+    <br>
+    <br>
+    <div>
+      <a style="display:block;" on-click="goToAccueilPage()">
+        <img src="assets/img/logo.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;" />
+      </a>
+    </div>
+  </ion-content>

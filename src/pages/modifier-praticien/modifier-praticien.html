@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MODIFIER PRATICIEN
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding >
+  <form>
+    <ion-item color="positive">
+      <ion-icon name="archive" item-left></ion-icon>
+   Mise à jour le contact
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom </ion-label>
+      <ion-input type="text" [(ngModel)]="data.nom" name="nomPra"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label> Prénom </ion-label>
+      <ion-input type="text" [(ngModel)]="data.prenom" name="prenomPra"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label> Adresse </ion-label>
+      <ion-textarea [(ngModel)]="data.adresse" name="adresse" ></ion-textarea>
+    </ion-item>
+    <ion-item >
+      <ion-label> Département </ion-label>
+      <ion-input type="text" [(ngModel)]="data.departement" name="departement"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label> Téléphone  </ion-label>
+      <ion-input type="text" [(ngModel)]="data.tel" name= "telPra"></ion-input>
+    </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-label>Type</ion-label>
+          <ion-select [(ngModel)]="data.type" name="Type">
+            <ion-option value="mes">Medecin</ion-option>
+            <ion-option value="phar">Pharmacien</ion-option>
+            <ion-option value="chef">Chef de Clinique</ion-option>
+            <ion-option value="autre">autre</ion-option>
+            </ion-select>
+        </ion-item>
+      </ion-list>
+    <ion-item >
+      <ion-label></ion-label>
+      <ion-input type="text"[(ngModel)]="data.specialiteComplementaire" name= "specialite" placeholder="SpécialitéComplémentaire"></ion-input>
+    </ion-item>
+   <br>
+  <br>
+    <button ion-button type="submit" block color="positive" on-click= "update()"> Mettre à jour </button>
+    <br>
+    <br>
+    <div>
+      <a style="display:block;" on-click="goToAccueilPage()">
+        <img src="assets/img/logo.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;" />
+      </a>
+    </div>
+  </form>
+</ion-content>

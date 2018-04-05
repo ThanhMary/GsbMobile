@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Liste des rapports
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <img src="assets/img/ecrit.png" style="display:block;width:90%;height:auto;margin-left:auto;margin-right:auto;" />
+     <ion-list>
+    <ion-item color="positive">
+      <ion-icon name="paper" item-left></ion-icon>
+      Sélectionner la date
+      <ion-icon name="arrow-dropdown" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="DD/MMMM/YYYY"></ion-datetime>
+      </ion-item>
+  </ion-list>
+  <div>
+    <button  ion-button color="positive" block on-click="afficheRapport()" >Modifier</button>
+    <button  ion-button color="danger" outline block on-click="supprimerRapport()">Supprimer</button>
+  </div>
+  
+  <div>
+    <a style="display:block;" on-click="goToAccueilPage()">
+      <br>
+      <br>
+      <img src="assets/img/logo.png" style="display:block;width:20%;height:auto;margin-left:auto;margin-right:auto;" />
+    </a>
+  </div>
+</ion-content>
