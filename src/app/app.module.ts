@@ -18,12 +18,18 @@ import { VisiteurPage } from '../pages/visiteur/visiteur';
 import { ModifierPraticienPage} from '../pages/modifier-praticien/modifier-praticien';
 import { ModifierRapportPage} from '../pages/modifier-rapport/modifier-rapport';
 
-import { SQLite } from '@ionic-native/sqlite';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
 
 
 import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
+import { DatabaseProvider } from '../providers/database/database';
+import { RapportProvider } from '../providers/rapport/rapport';
+import { PraticienProvider } from '../providers/praticien/praticien';
+import { MedicamentProvider } from '../providers/medicament/medicament';
+import { FamilleMedProvider } from '../providers/famille-med/famille-med';
+import { TypePraticienProvider } from '../providers/type-praticien/type-praticien';
 
 
 @NgModule({
@@ -68,11 +74,17 @@ import { HttpClient } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-   
+    SQLiteObject,
     SQLite,
     Toast,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpClient,
+    DatabaseProvider,
+    RapportProvider,
+    PraticienProvider,
+    MedicamentProvider,
+    FamilleMedProvider,
+    TypePraticienProvider,
   
 
   ]
